@@ -1,8 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { ClickTask } from "@/data/questionsData";
+
+function shuffleArray<T>(items: readonly T[]): T[] {
+  const arr = [...items];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
 
 const POINTS_PER_STEP = 1;
 
@@ -14,6 +23,11 @@ type Props = {
 export function ClickTaskComponent({ question, onComplete }: Props) {
   const [locked, setLocked] = useState(false);
   const [pickedId, setPickedId] = useState<string | null>(null);
+
+  const shuffledOptions = useMemo(
+    () => shuffleArray(question.options),
+    [question.id],
+  );
 
   function handlePick(id: string) {
     if (locked) return;
@@ -41,7 +55,7 @@ export function ClickTaskComponent({ question, onComplete }: Props) {
       </motion.p>
 
       <div className={`grid w-full gap-5 ${colsClass} md:gap-6`}>
-        {question.options.map((opt, index) => {
+        {shuffledOptions.map((opt, index) => {
           const isPicked = pickedId === opt.id;
           const isCorrect = opt.id === question.correctOptionId;
           const showResult = locked && isPicked;
