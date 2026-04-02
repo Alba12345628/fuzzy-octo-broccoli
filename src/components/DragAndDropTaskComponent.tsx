@@ -171,7 +171,7 @@ export function DragAndDropTaskComponent({ question, onComplete }: Props) {
         onDragEnd={handleDragEnd}
       >
         <div className="flex w-full flex-col gap-6">
-          <DroppableZone id={POOL_ID} title="Сюда бери карточки" tone="pool">
+          <DroppableZone id={POOL_ID} title="" tone="pool">
             {question.items
               .filter((item) => placements[item.id] === POOL_ID)
               .map((item) => (

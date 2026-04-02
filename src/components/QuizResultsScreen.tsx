@@ -13,7 +13,7 @@ function DynamicInterpretation({ score }: { score: number }) {
     return (
       <div className="mb-6 rounded-xl border border-green-200 bg-green-50 p-6 text-left">
         <h3 className="mb-2 text-lg font-bold text-green-900">
-          Высокий уровень (25–30 баллов)
+          Высокий уровень (23–28 баллов)
         </h3>
         <p className="mb-2 text-green-800">
           Словообразовательные умения сформированы. Характерно:
@@ -41,7 +41,7 @@ function DynamicInterpretation({ score }: { score: number }) {
     return (
       <div className="mb-6 rounded-xl border border-blue-200 bg-blue-50 p-6 text-left">
         <h3 className="mb-2 text-lg font-bold text-blue-900">
-          Средний уровень (18–24 балла)
+          Средний уровень (18–22 балла)
         </h3>
         <p className="mb-2 text-blue-800">
           Словообразовательные умения сформированы частично. Характерно:
@@ -164,7 +164,7 @@ export function QuizResultsScreen({ score, onReset }: Props) {
         </p>
         <p className="mb-2 text-gray-700">
           Оценка выполнения заданий проводилась по суммарному количеству
-          набранных баллов (максимум — 30 баллов). При интерпретации
+          набранных баллов (максимум — 28 баллов). При интерпретации
           учитывались:
         </p>
         <ul className="list-disc space-y-1 pl-6 text-gray-700">
