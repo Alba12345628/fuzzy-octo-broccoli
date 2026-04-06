@@ -6,7 +6,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-1 flex-col items-center justify-center bg-gradient-to-b from-amber-200 via-orange-100 to-fuchsia-100 px-4 py-10 font-sans">
       <div className="mb-8 max-w-2xl text-center">
         <h1 className="text-3xl font-black tracking-tight text-amber-950 drop-shadow-sm md:text-4xl">
-          Диагностика словообразовательных умений детей с общим недоразвитием речи
+          Диагностика словообразовательных умений у детей 5 лет с общим недоразвитием речи III уровня
         </h1>
         <p className="mt-3 text-lg font-medium text-amber-900/90">
           Сейчас мы будем проверять, как ты умеешь различать названия больших и маленьких вещей. Например, большая собака и маленькая собачка, большая чаша и маленькая чашечка, большая картина, и маленькая картинка. Следуй инструкциям, которые я тебе даю.
